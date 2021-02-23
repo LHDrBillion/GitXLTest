@@ -1,8 +1,5 @@
-Ident level;Class type;Class;Data property;Linked_Object;Description;"Data Type
-(O - Object, D -DateTime, S - String, B - Boolean, I - Integer, Do - Double, L - Long, Du - Duration, Sub - Subtype)
-";Optional or Mandatory;Cardinality;Enumeration;Enum values;Reference;Comment linked to version
 0;Logistic Object;BookingOption;;;Booking details;O;;n;;;;
-1;Logistic Object;BookingOption;bookingStatus;;Status of the Booking with regards to the step in the Quote & Book process: Quoted, Booked, Ö;S;O;1;Y;Quote, Pending, Booked, Cancelled, Rejected, Expired;X;
+1;Logistic Object;BookingOption;bookingStatus;;Status of the Booking with regards to the step in the Quote & Book process: Quoted, Booked, ‚Ä¶;S;O;1;Y;Quote, Pending, Booked, Cancelled, Rejected, Expired;X;
 1;Logistic Object;BookingOption;carrier;Company;Carrier details;O;M;;;;;
 1;Logistic Object;BookingOption;carrierProductInfo;Carrierproduct;Reference to the Carrier products included in the offer;O;;n;;;;
 1;Logistic Object;BookingOption;consignee;Company;Consignee details;O;;;;;;
@@ -42,7 +39,7 @@ Ident level;Class type;Class;Data property;Linked_Object;Description;"Data Type
 1;Logistic Object;CarrierProduct;productDescription;;Carriers's product description;S;;;;;;
 0;Logistic Object;Characteristics;;;Product additional details;O;;n;;;;
 1;Logistic Object;Characteristics;characteristicsType;;Product characteristic code - e.g. CLR - Color;S;;;;;;
-1;Logistic Object;Characteristics;value;;Product characteristic value / attribute - e.g. BlueÖ;S;;;;;;
+1;Logistic Object;Characteristics;value;;Product characteristic value / attribute - e.g. Blue‚Ä¶;S;;;;;;
 0;Logistic Object;CO2CalcMethod;;;CO2 Calculation methods;O;;n;;;;
 1;Logistic Object;CO2CalcMethod;methodName;;Name of the CO2 calculation method;S;;;;;;
 1;Logistic Object;CO2CalcMethod;methodVersion;;Version used for the calculation;S;;;;;;
@@ -201,7 +198,7 @@ Identifies the Logistic Unit package type. UN Recommendation on Transport of Dan
 1;Logistic Object;PieceDg;overpackT1;;A single number assigned to a package, overpack or freight container to provide control over radiation exposure. ;S;;;;;;
 0;Logistic Object;Price;;;Price asociated to the offer/booking;O;;;;;;
 1;Logistic Object;Price;bookingOption;BookingOption;Reference to the Booking or Offer;O;;;;;;change of datatype (name)
-1;Logistic Object;Price;carrierChargeCode;;Charge code for carrier, eg. CA, CB, Ö;S;;;;;;
+1;Logistic Object;Price;carrierChargeCode;;Charge code for carrier, eg. CA, CB, ‚Ä¶;S;;;;;;
 1;Logistic Object;Price;grandTotal;Value;Total price;Do;;;;;;
 1;Logistic Object;Price;ratings;Ratings;Rating used for pricing;O;;;;;;
 1;Logistic Object;Price;validTo;;Terms of validity;D;;;;;;
@@ -211,9 +208,9 @@ Identifies the Logistic Unit package type. UN Recommendation on Transport of Dan
 Mandatoryif the commodity code is more than 6 digits";S;M;;;https://www.exportimportstatistics.com/know-your-ITC-HS-Code.aspx;;
 1;Logistic Object;Product;hsCommodityDescription;;Commodity description;S;M;;;;;
 1;Logistic Object;Product;hsCommodityName;;If no Code provided, name of commodity;S;;n;;;;
-1;Logistic Object;Product;hsType;;Issuer of the Commodity Code - e.g. Brussels Tariff Nomenclature, EU Harmonized System Code, UN Standard International TradeÖ;S;M;;;;;
+1;Logistic Object;Product;hsType;;Issuer of the Commodity Code - e.g. Brussels Tariff Nomenclature, EU Harmonized System Code, UN Standard International Trade‚Ä¶;S;M;;;;;
 1;Logistic Object;Product;manufacturer;Company;Manufacturing company details and contacts;O;;;;;;
-1;Logistic Object;Product;otherIdentifier;OtherIdentifier;Other product identifier (e.g. Bar code, UPC, EAN, AmazonÖ);O;;n;;;;
+1;Logistic Object;Product;otherIdentifier;OtherIdentifier;Other product identifier (e.g. Bar code, UPC, EAN, Amazon‚Ä¶);O;;n;;;;
 1;Logistic Object;Product;productDescription;;Product description;S;;;;;;
 1;Logistic Object;Product;productIdentifier;;Manufacturer's unique product identifier;S;;;;;;
 1;Logistic Object;Product;commodityItemNumber;;Indicates the specific commodity on which the rate class code is applied ;S;;;;;;
@@ -226,7 +223,7 @@ Mandatoryif the commodity code is more than 6 digits";S;M;;;https://www.exportim
 1;Logistic Object;ProductDg;packingInstructionNumber;;"The packing instruction number applicable to the UN number / proper shipping name entry. A three-numeric value which may be preceded by the letter ""Y"".  Mandatory field for air transport (Air) ";S;;;;;;
 1;Logistic Object;ProductDg;hazardClassificationId;;Identifies the hazard class / division identification containing a numeric field separated by a decimal ;S;;;;;;
 1;Logistic Object;ProductDg;additionalHazardClassificationId;;Identifies the subsidiary hazard class / division identification containing a numeric field separated by a decimal. There may be 0, 1 or 2 subsidiary risk classes or divisions. If there is more than one, each should be separated by a comma. The subsidiary risk must be shown in parentheses. ;S;;;;;;
-1;Logistic Object;ProductDg;specialProvisionId;;For Air Mode: Special Provision may show a single, double or triple digit number preceded by the letter ìAî, against appropriate entries in the List of Dangerous Goods;S;;;;;;
+1;Logistic Object;ProductDg;specialProvisionId;;For Air Mode: Special Provision may show a single, double or triple digit number preceded by the letter ‚ÄúA‚Äù, against appropriate entries in the List of Dangerous Goods;S;;;;;;
 1;Logistic Object;ProductDg;authorizationInformation;;Contains additional information relating to an approval, permission or other specific detail applicable to the commodity (e.g. Dangerous Goods in excepted quantities) ;S;;;;;;
 1;Logistic Object;ProductDg;dgRadioactiveMaterial;DgProductRadioactive;;O;;n;;;;
 0;Logistic Object;Ranges;;;Ranges;O;;;;;;
@@ -425,7 +422,7 @@ section 7, Standard Specifications 40/3 or 40/4 in ULD Regulations";S;;;;;;
 1;Common Object;ExternalReference;documentOriginator;Company;Document originator details and contacts;O;;;;;;
 1;Common Object;ExternalReference;documentType;;Type of the referenced document . Refer UNEDIFACT 1001  e.g. 740 - Air Waybill;S;;;;;https://www.unece.org/trade/untdid/d00a/tred/tred1001.htm;
 1;Common Object;ExternalReference;documentVersion;;Document version number;S;;;;;;
-0;Common Object;Geolocation;;;Geolocation details - e.g. for drones, automated vehiclesÖ;O;;;;;;
+0;Common Object;Geolocation;;;Geolocation details - e.g. for drones, automated vehicles‚Ä¶;O;;;;;;
 1;Common Object;Geolocation;elevation;;Elevation from sea level;D;;;;;;Change of datatype
 1;Common Object;Geolocation;latitude;;Location latitude ;D;;;;;;Change of datatype
 1;Common Object;Geolocation;longitude;;Location longitude ;D;;;;;;Change of datatype
